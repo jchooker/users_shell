@@ -1,1 +1,16 @@
 Queries for Users (Shell) project
+user1 = User.objects.create(first_name="Jay", last_name="Dravid", email_address="dravjidj@elysium.pizza", age=43)
+user2 = User.objects.create(first_name="Algert", last_name="Crelvl", email_address="idgi@modz.attorney", age=55)
+user3 = User.objects.create(first_name="Craevis", last_name="Brlvn", email_address="adminjr@lamiroir.edge", age=12)
+User.objects.all()
+User.objects.last()
+User.objects.first()
+a=User.objects.get(id=3)
+a.last_name="Pancakes"
+a.save()
+b=User.objects.get(id=2)
+b.delete()
+for user in User.objects.order_by("first_name"):
+   user.first_name
+for user in User.objects.order_by("-first_name"):
+   user.first_name
